@@ -1,0 +1,59 @@
+# vim: filetype=neomuttrc
+# muttrc file for account joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt
+set realname = "João Barreiros Coelho Rodrigues"
+set from = "joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
+set sendmail = "msmtp -a joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
+alias me João Barreiros Coelho Rodrigues <joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt>
+set folder = "/home/comuna/.local/share/mail/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
+set header_cache = /home/comuna/.cache/mutt-wizard/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt/headers
+set message_cachedir = /home/comuna/.cache/mutt-wizard/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt/bodies
+set mbox_type = Maildir
+
+
+bind index,pager gg noop
+bind index,pager g noop
+bind index,pager M noop
+bind index,pager C noop
+bind index gg first-entry
+unmailboxes *
+unalternates *
+unset signature
+unmacro index o
+macro index o "<shell-escape>mw -y joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt<enter>" "run mbsync to sync joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
+
+mailboxes "=Trash" "=Spam" "=Sent" "=Drafts" "=INBOX"
+macro index,pager gt "<change-folder>=Trash<enter>" "go to trash"
+macro index,pager Mt ";<save-message>=Trash<enter>" "move mail to trash"
+macro index,pager Ct ";<copy-message>=Trash<enter>" "copy mail to trash"
+set trash = "+Trash"
+macro index,pager gS "<change-folder>=Spam<enter>" "go to spam"
+macro index,pager MS ";<save-message>=Spam<enter>" "move mail to spam"
+macro index,pager CS ";<copy-message>=Spam<enter>" "copy mail to spam"
+set record = "+Sent"
+macro index,pager gs "<change-folder>=Sent<enter>" "go to sent"
+macro index,pager Ms ";<save-message>=Sent<enter>" "move mail to sent"
+macro index,pager Cs ";<copy-message>=Sent<enter>" "copy mail to sent"
+set postponed = "+Drafts"
+macro index,pager gd "<change-folder>=Drafts<enter>" "go to drafts"
+macro index,pager Md ";<save-message>=Drafts<enter>" "move mail to drafts"
+macro index,pager Cd ";<copy-message>=Drafts<enter>" "copy mail to drafts"
+macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
+macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
+macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
+set spoolfile = "+INBOX"
+
+#GPG
+set crypt_use_gpgme=yes
+set crypt_autosign=no
+set crypt_verify_sig=yes
+set crypt_replysign=yes
+set crypt_replyencrypt=yes
+set crypt_replysignencrypted=yes
+set crypt_autoencrypt = no
+
+
+set pgp_default_key="[REDACTED]"
+set pgp_check_gpg_decrypt_status_fd
+set pgp_use_gpg_agent = yes
+set pgp_self_encrypt = yes
+
