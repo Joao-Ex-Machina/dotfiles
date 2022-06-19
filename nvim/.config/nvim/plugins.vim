@@ -5,4 +5,5 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'machakann/vim-sandwich'
+	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 call plug#end()

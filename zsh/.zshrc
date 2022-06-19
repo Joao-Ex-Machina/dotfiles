@@ -1,3 +1,17 @@
+#set adb
+export PATH=${PATH}:android-sdk-linux_x86/platform-tools/ 
+#set ccache
+ccache -M 50G
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# add Android SDK platform tools to path
+if [ -d "$HOME/platform-tools" ] ; then
+    PATH="$HOME/platform-tools:$PATH"
+fi
+
 # Adds ~/.local/bin to $PATH
 export PATH="$PATH:${$(find -L ~/.local/bin -type d -printf %p:)%%:}"
 
