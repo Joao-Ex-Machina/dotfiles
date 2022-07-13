@@ -65,7 +65,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_gray3, "-sb", col_red, "-sf", col_black, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
-
+static const char *lockcmd[] = { "slock",NULL};
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -102,6 +102,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ 0,          XK_End,  spawn,          {.v = screenshotcmd } },
+	{ 0,          XK_Scroll_Lock,  spawn,          {.v = lockcmd } },
 };
 
 /* button definitions */
