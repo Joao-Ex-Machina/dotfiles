@@ -2,8 +2,8 @@
 Config and other Dotfiles for my Arch setup. You can also find my modified version of [Luke Smith's](https://lukesmith.xyz/) [dwmblocks scripts](https://github.com/LukeSmithxyz/voidrice/tree/master/.local/bin/statusbar), since I really hate colored emotes
 
 ## Rice Screenshot and Wallpaper image 
-![rice](https://raw.githubusercontent.com/Joao-Ex-Machina/dotfiles/tree/master/images/prtsc.png)\
-![Background](https://raw.githubusercontent.com/Joao-Ex-Machina/dotfiles/tree/master/images/bgII.jpg)
+![rice](https://raw.githubusercontent.com/Joao-Ex-Machina/dotfiles/master/images/prtsc.png)\
+![Background](https://raw.githubusercontent.com/Joao-Ex-Machina/dotfiles/master/images/bgII.jpg)
 ## Main packages
 |                    |                                                          |
 |--------------------|----------------------------------------------------------|
