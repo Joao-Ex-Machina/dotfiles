@@ -1,4 +1,4 @@
 # vim: filetype=neomuttrc
 source /usr/share/mutt-wizard/mutt-wizard.muttrc
-source /home/comuna/.config/mutt/accounts/1-joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt.muttrc
-macro index,pager i1 '<sync-mailbox><enter-command>source /home/comuna/.config/mutt/accounts/1-joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
+source /home/jbcr/.config/mutt/accounts/1-joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/jbcr/.config/mutt/accounts/1-joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"

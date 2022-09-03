@@ -101,7 +101,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ 0,          XK_End,  spawn,          {.v = screenshotcmd } },
+	{ 0,          XK_Print,  spawn,          {.v = screenshotcmd } },
 	{ 0,          XK_Scroll_Lock,  spawn,          {.v = lockcmd } },
 };
 

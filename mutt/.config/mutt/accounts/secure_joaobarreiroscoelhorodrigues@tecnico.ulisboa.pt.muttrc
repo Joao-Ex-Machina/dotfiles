@@ -4,9 +4,9 @@ set realname = "João Barreiros Coelho Rodrigues"
 set from = "joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
 set sendmail = "msmtp -a joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
 alias me João Barreiros Coelho Rodrigues <joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt>
-set folder = "/home/comuna/.local/share/mail/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
-set header_cache = /home/comuna/.cache/mutt-wizard/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt/headers
-set message_cachedir = /home/comuna/.cache/mutt-wizard/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt/bodies
+set folder = "/home/jbcr/.local/share/mail/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt"
+set header_cache = /home/jbcr/.cache/mutt-wizard/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt/headers
+set message_cachedir = /home/jbcr/.cache/mutt-wizard/joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt/bodies
 set mbox_type = Maildir
 
 
