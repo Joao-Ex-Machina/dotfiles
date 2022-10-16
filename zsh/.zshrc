@@ -138,3 +138,8 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+#setup aliases
+alias ls='exa --long'
+alias trash='rm -i'
+alias fix-404='sudo pacman -S archlinux-keyring'
+alias monitor-2='mons -e right && feh --bg-scale ~/Desktop/images/bgIV.jpg'
