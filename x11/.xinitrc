@@ -1,5 +1,5 @@
-mpv --no-video ~/Sputnik-Beeping.mp4 &	#startup sound  
-picom --experimental-backend &		#start picom
+mpv --no-video ~/dialup.mp4 &	#startup sound  
+picom &		#start picom
 dunst & 				#start notification daemon
 flameshot &				#start flameshot at start in order to use it during session
 feh --bg-scale ~/Desktop/images/bgIV.jpg	#set background/wallpaper image

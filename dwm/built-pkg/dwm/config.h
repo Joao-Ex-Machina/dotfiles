@@ -62,19 +62,36 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_gray3, "-sb", col_red, "-sf", col_black, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *dmenucmd[] = { "dmenu-recent-aliases",NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 static const char *lockcmd[] = { "slock",NULL};
+static const char *inclight[]={"xbacklight", "-inc", "5"};
+static const char *declight[]={"xbacklight", "-dec", "5"};
+static const char *resetlight[]={"xbacklight", "-set", "100"};
+static const char *email[] = {"xvkbd","-text", "joaobarreiroscoelhorodrigues@tecnico.ulisboa.pt", NULL};
+static const char *kbdpt[] = {"setxkbmap","-layout", "pt","&", NULL};
+static const char *mons2[] = {"monitor-2", NULL};
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	/*Terminal Keyboard Macros*/
+	{ 0,                            XK_Print,  spawn,          {.v = screenshotcmd } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = lockcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = email} },
+	{ MODKEY,                       XK_F1,      spawn,          {.v = kbdpt} },
+	{ MODKEY,                       XK_F7,     spawn,          {.v = mons2} },
+    {MODKEY,                        XK_Delete, spawn,            {.v=inclight}},
+{MODKEY,                        XK_End, spawn,            {.v=declight}},
+{MODKEY|ShiftMask,                        XK_Delete, spawn,            {.v=resetlight}},
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY2,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY2,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY2,                      XK_i,      incnmaster,     {.i = +1 } },
+	{ MODKEY2,                      XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|MODKEY2,               XK_Return, zoom,           {0} },
@@ -101,8 +118,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ 0,          XK_Print,  spawn,          {.v = screenshotcmd } },
-	{ 0,          XK_Scroll_Lock,  spawn,          {.v = lockcmd } },
+
+
 };
 
 /* button definitions */

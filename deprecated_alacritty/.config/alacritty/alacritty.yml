@@ -15,12 +15,13 @@ colors:
     white: "#C6C6C4"
   bright:
     black: "#696969"
-    red: "#CD0000"
+    red: "#A40000"
     green: "#269A58"
     yellow: "#adacd2"
-    blue: "#CD0000"
+    blue: "#ff00ff"
     magenta: "#D73232"
-    cyan: "#CD0000"
+
+    cyan: "#33eeee"
     white: "#FFFAFA"
 font:
   normal:
