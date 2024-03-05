@@ -5,5 +5,4 @@ call plug#begin()
 	Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
     Plug 'vimwiki/vimwiki'
     Plug 'tools-life/taskwiki'
-    Plug 'preservim/nerdtree'
 call plug#end()

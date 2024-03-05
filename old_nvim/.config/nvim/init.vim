@@ -11,5 +11,3 @@ syntax on
 :highlight FgCocWarningFloatBgCocFloating ctermbg=Black
 :highlight FgCocInfoFloatBgCocFloating ctermbg=Black
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
-

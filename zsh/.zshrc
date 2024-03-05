@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #set adb
 export PATH=${PATH}:android-sdk-linux_x86/platform-tools/ 
 #set ccache
@@ -18,13 +25,6 @@ export PATH="$PATH:${$(find -L ~/.local/bin -type d -printf %p:)%%:}"
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -35,7 +35,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,7 +118,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -128,8 +127,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 #gaphor
 
 #setup aliases
@@ -139,7 +136,7 @@ alias shutdown='mpv --no-video ~/terminated.mp3 && shutdown'
 alias ls='exa --long'
 alias trash='rm -i'
 alias fix-404='sudo pacman -S archlinux-keyring'
-alias monitor-2='mons -e right && feh --bg-scale ~/Desktop/images/bgIV.jpg'
+alias monitor-2='mons -e right && feh --bg-fill ~/bgIV.jpg'
 alias octave='octave --gui'
 alias mellon='sudo $(fc -ln -1)'
 alias intellij='_JAVA_AWT_WM_NONREPARENTING=1 idea'
@@ -161,5 +158,4 @@ command_not_found_handler () {
 	return 127
 }
 
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k/.p10k.zsh.
-[[ ! -f ~/dotfiles/p10k/.p10k.zsh ]] || source ~/dotfiles/p10k/.p10k.zsh
+

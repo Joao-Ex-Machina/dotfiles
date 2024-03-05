@@ -22,11 +22,11 @@ for battery in /sys/class/power_supply/BAT?*; do
 	[ -n "${capacity+x}" ] && printf " "
 	# Sets up the status and capacity
 	case "$(cat "$battery/status")" in
-		"Full") status="" ;;
-		"Discharging") status="" ;;
-		"Charging") status="ﮣ" ;;
-		"Not charging") status="ﮤ" ;;
-		"Unknown") status="♻️" ;;
+		"Full") status="󰂄" ;;
+		"Discharging") status="󰂁" ;;
+		"Charging") status="󰚥" ;;
+		"Not charging") status="󰚥" ;;
+		"Unknown") status="" ;;
 	esac
 	capacity=$(cat "$battery/capacity")
 	# Will make a warn variable if discharging and low
