@@ -6,10 +6,12 @@ syntax on
 :set shiftwidth=4
 :set expandtab
 :set clipboard+=unnamedplus
+:colorscheme vim
 :set background=light
 :highlight Statement ctermfg=Yellow
 :highlight FgCocWarningFloatBgCocFloating ctermbg=Black
 :highlight FgCocInfoFloatBgCocFloating ctermbg=Black
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
+:highlight CocInlayHint ctermfg=Black
+:highlight CocInlayHint ctermbg=LightGray
 

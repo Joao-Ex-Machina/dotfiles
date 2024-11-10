@@ -5,7 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = ["monospace:style=Regular:pixelsize=14:antialias=true:autohint=true","Braille:style=Regular:pixelsize=14:antialias=true:autohint=true"];
+static char *font = "Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
+static char *font2 = "Braille:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*

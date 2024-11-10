@@ -102,7 +102,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+# valgrind
+DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -128,6 +129,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 #gaphor
+
+# add zokrates to path
+export PATH=$PATH:/home/jbcr/.zokrates/bin
 
 #setup aliases
 alias reboot='mpv --no-video ~/terminated.mp3 && reboot'

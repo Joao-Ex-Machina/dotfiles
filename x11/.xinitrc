@@ -8,4 +8,4 @@ dwmblocks &
 exec dwm 				#execute windows manager at start
 nm-applet &
 pulsemixer &
-
+xautolock -time 1 -locker slock & #autolock

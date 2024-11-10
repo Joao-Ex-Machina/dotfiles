@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = ["monospace:style=Regular:pixelsize=14:antialias=true:autohint=true","Braille:style=Regular:pixelsize=14:antialias=true:autohint=true"];
+static char *font = "JBCR Custom Hack Nerd Font:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -74,7 +74,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-16color";
+char *termname = "st-256color";
 
 /*
  * spaces per tab
@@ -102,9 +102,9 @@ static const char *colorname[] = {
 
 	[0] = "#323437",
 	[1] = "#ff0000",
-	[2] = "#ff6600",
-	[3] = "#b5ff81",
-	[4] = "#68beff",
+	[2] = "#8cc85f",
+	[3] = "#e3c78a",
+	[4] = "#80a0ff",
 	[5] = "#d183e8",
 	[6] = "#79dac8",
 	[7] = "#a1aab8",
@@ -113,11 +113,11 @@ static const char *colorname[] = {
 
 	[8] = "#7c8f8f",
 	[9] = "#cd0000",
-	[10] = "#d9d2e9",
-	[11] = "#9af576",
-	[12] = "#a0d3f7",
+	[10] = "#36c692",
+	[11] = "#bfbf97",
+	[12] = "#74b2ff",
 	[13] = "#ae81ff",
-	[14] = "#a1e5d8",
+	[14] = "#85dc85",
 	[15] = "#e2637f",
 
 	[255] = 0,
